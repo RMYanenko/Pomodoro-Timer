@@ -1,7 +1,7 @@
 <div class="card">
     <h1 class="title">Pomodoro timer</h1>
     <div class="container">
-      <div class="timer-wrapper d-flex">
+      <div class="service-wrapper d-flex">
         <button
           class="btn"
           (click)="decreaseDuration()"
@@ -9,8 +9,14 @@
           <div class="time">{{workDuration}}</div>
         <button class="btn" (click)="increaseDuration()">+</button>
       </div>
+      <div class="timer-wrapper">
+        <h3>{{titleDuration}}</h3>
+        <div class="counting">
+          {{minutes}} : {{seconds}}
+        </div>
+      </div>
       <div class="button-wraper d-flex">
-        <button class="btn">Start</button>
+        <button class="btn" (click)="startTime()">Start</button>
         <button class="btn">Stop</button>
       </div>
     </div>
